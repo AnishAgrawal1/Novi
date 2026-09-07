@@ -7,7 +7,7 @@ import { Reveal } from "../../../../components/reveal";
 
 // ENTITIES
 import { PRICING_PLANS } from "../../entities/constants";
-import type { Plan } from "../../entities/types";
+import type { TYPE_PRICING_PLANS } from "../../entities/types";
 
 export const Pricing = () => {
     const [annual, setAnnual] = useState(true);
@@ -56,7 +56,7 @@ export const Pricing = () => {
                 </Reveal>
 
                 <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
-                    {PRICING_PLANS.map((plan: Plan, i) => (
+                    {PRICING_PLANS.map((plan: TYPE_PRICING_PLANS, i) => (
                         <Reveal key={plan.name} delay={i * 0.1} className="h-full">
                             <div
                                 className={`relative flex h-full flex-col overflow-hidden rounded-3xl border p-8 ${plan.highlighted
